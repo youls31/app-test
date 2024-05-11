@@ -1,4 +1,4 @@
-package ma.emi.ginf.poo;
+package ma.emi.ginf.domain;
 
 public class PersonnePysique extends Client {
 	private String nom,prenom;

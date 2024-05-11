@@ -1,4 +1,4 @@
-package ma.emi.ginf.poo;
+package ma.emi.ginf.domain;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -9,7 +9,7 @@ public abstract class Client {
 	protected String email;
 	private Map<Integer,Commande> mesCommandes;
 	
-	
+
 	public Client(int numero, String adresseFacturation, String email) {
 		super();
 		this.numero = numero;

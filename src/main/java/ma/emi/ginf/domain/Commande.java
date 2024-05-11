@@ -1,4 +1,4 @@
-package ma.emi.ginf.poo;
+package ma.emi.ginf.domain;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -11,6 +11,24 @@ public class Commande {
 	private LocalDate dateCommande;
 	private Client owner;
 	private List<DetailCommande> dts ;
+	
+	public List<DetailCommande> getDts() {
+		return dts;
+	}
+	public void setDts(List<DetailCommande> dts) {
+		this.dts = dts;
+	}
+
+	public double calculerMontantTotal(){
+		 double total=0;
+		  for(DetailCommande dt : this.dts)
+			    total+=dt.getPrixVenteReel()*dt.getQte();
+		return total;
+	 }
+	
+	
+	
+
 	
 	public Commande(Client client) {
 		this.numero = KeyGenerator.getKey();
